@@ -18,10 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from restaurant import views
+from restaurant import views as restaurant_view
 
 router = routers.DefaultRouter()
-router.register(r'tables', views.BookingViewSet)
+router.register(r'tables', restaurant_view.BookingViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
